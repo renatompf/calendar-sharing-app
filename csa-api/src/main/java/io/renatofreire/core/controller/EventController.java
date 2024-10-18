@@ -47,6 +47,4 @@ public class EventController {
         return ResponseEntity.status(HttpStatus.OK).body(eventService.deleteEvent(userDetails, eventId));
     }
 
-
-
 }
