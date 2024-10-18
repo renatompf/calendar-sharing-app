@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Calendar Shared Notification</title>
+  <style>
+    /* Reset styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #e8e8e8;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      background-color: black;
+      padding: 40px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333333;
+      margin: 0 0 20px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: black;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      background-color: black;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+      background: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #999999;
+    }
+
+    .footer a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <td>
+      <div class="container">
+        <div class="header">
+          <h1>Calendar Shared</h1>
+        </div>
+        <div class="content">
+          <p>Hello <strong th:text="${name}">Valued User</strong>,</p>
+          <p>A calendar titled "<strong th:text="${calendarName}">Your Calendar</strong>" has been shared with you.</p>
+          <a class="btn" href="#" th:href="${link}">Verify Calendar Sharing</a>
+          <p>You can now access and manage this calendar by logging into your account.</p>
+          <p>Best regards,<br>The Team</p>
+        </div>
+        <div class="footer">
+          <p>1234 Premium Street, Suite 100<br>San Francisco, CA 94102</p>
+          <p>Powered by <a href="http://htmlemail.io">HTMLemail</a></p>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
